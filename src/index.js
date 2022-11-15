@@ -1,3 +1,7 @@
+const out = document.querySelector(".calc-scrin p");
+const ac = document.querySelector(".ac");
+const buttons = document.querySelector(".buttons");
+
 let a = "";
 let b = "";
 let sign = "";
@@ -5,10 +9,6 @@ let finish = false;
 
 const digits = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."];
 const action = ["-", "+", "X", "/"];
-
-const out = document.querySelector(".calc-scrin p");
-const ac = document.querySelector(".ac");
-const buttons = document.querySelector(".buttons");
 
 function clearAll() {
   a = "";
@@ -19,9 +19,7 @@ function clearAll() {
   console.log(a, b, sign);
 }
 
-ac.addEventListener("click", clearAll);
-
-buttons.addEventListener("click", (e) => {
+function calculation(e) {
   if (!e.target.classList.contains("btn")) return;
   if (e.target.classList.contains("ac")) return;
   const key = e.target.textContent;
@@ -71,4 +69,7 @@ buttons.addEventListener("click", (e) => {
     finish = true;
     out.textContent = a;
   }
-});
+}
+
+ac.addEventListener("click", clearAll);
+buttons.addEventListener("click", calculation);
