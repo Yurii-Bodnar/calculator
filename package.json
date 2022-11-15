@@ -2,7 +2,7 @@
   "name": "calculator",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "homepage": "https://yurii-bodnar.github.io/calculator/",
   "scripts": {
     "build": "parcel build src/*.html --public-url /calculator/",
     "start": "parcel src/*.html",
@@ -24,6 +24,5 @@
     "parcel-reporter-clean-dist": "^1.0.4",
     "posthtml-include": "^1.7.4",
     "process": "^0.11.10"
-  },
-  "homepage": "https://yurii-bodnar.github.io/calculator/"
+  }
 }
